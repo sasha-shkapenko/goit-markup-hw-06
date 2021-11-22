@@ -347,9 +347,14 @@ input:focus + .form-icon {
   height: 120px;
   resize: none;
 }
+.policy {
+  display: flex;
+  align-items: center;
+}
 .policy::before {
   content: "";
   display: inline-block;
+  align-self: center;
 
   margin-right: 7px;
   width: 16px;
@@ -357,10 +362,6 @@ input:focus + .form-icon {
 
   border: 2px solid rgba(33, 33, 33, 1);
   border-radius: 2px;
-}
-.checkbox-group {
-  display: flex;
-  align-items: center;
 }
 
 .checkbox:checked + .policy::before {
@@ -375,6 +376,7 @@ input:focus + .form-icon {
 .policy-conditions {
   color: var(--accent-text-color);
   text-decoration: underline;
+  margin-left: 4px;
 }
 
 .modal-window-btn {
