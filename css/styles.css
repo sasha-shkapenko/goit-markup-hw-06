@@ -243,7 +243,7 @@ p {
   transform: translate(-50%, -50%) scale(0.5);
 }
 .modal-window {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -295,22 +295,28 @@ p {
 
 .form-group {
   position: relative;
+  margin-bottom: 10px;
 
   display: flex;
   flex-direction: column;
 
   text-align: left;
 }
+.form-group.feedback {
+  margin-bottom: 20px;
+}
 .form-group-label {
+  display: block;
+
+  margin-bottom: 4px;
   font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
 }
 .form-group input,
 .form-group textarea {
-  margin-bottom: 10px;
   padding: 14px;
   height: 40px;
-  width: 448px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -331,7 +337,6 @@ p {
 
   top: 50%;
   left: 12px;
-  transform: translateY(-5px);
 
   transition: fill 250ms var(--animation-timing-function);
 }
@@ -342,14 +347,13 @@ input:focus + .form-icon {
   fill: var(--accent-text-color);
 }
 .form-group textarea {
-  margin-bottom: 20px;
-
   height: 120px;
   resize: none;
 }
 .policy {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .policy::before {
   content: "";
@@ -601,6 +605,9 @@ input:focus + .form-icon {
   display: flex;
   align-items: baseline;
 }
+.footer-contacts-container {
+  flex-grow: 1;
+}
 .logo .accent-footer {
   color: #ffffff;
 }
@@ -656,6 +663,8 @@ form {
 }
 .subscribe-email {
   padding: 15px 16px;
+
+  outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: rgba(47, 48, 58, 1);
